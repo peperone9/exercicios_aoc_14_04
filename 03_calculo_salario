@@ -1,0 +1,66 @@
+.data
+	msg1: .asciiz "horas trabalhas: "
+	msg2: .asciiz "horas extras: "
+	msg3: .asciiz "descontos: "
+	msg4: .asciiz "Salaro bruto: "
+	msg5: .asciiz "\nSalario liquido: "
+.text
+
+.globl main
+
+
+main:
+
+	#le horas trabalhadas
+	li $v0, 4
+	la $a0, msg1
+	syscall
+	
+	li $v0, 5
+	syscall
+	mul $t1, $v0, 10
+	
+	#le horas extras
+	li $v0, 4
+	la $a0, msg2
+	syscall
+	
+	li $v0, 5
+	syscall
+	#calculo salario bruto
+	mul $t2, $v0, 15
+	mul $t1, $t1, $t2
+	
+	#le desconto
+	li $v0, 4
+	la $a0, msg3
+	syscall
+	
+	li $v0, 5
+	syscall
+	#calculo salario liquido
+	sub $t2, $t1, $v0
+	
+	#mostra salario bruto
+	li $v0, 4
+	la $a0, msg4
+	syscall
+	
+	li $v0, 1
+	add $a0, $t1, 0
+	syscall
+	
+	#mostra liquido
+	li $v0, 4
+	la $a0, msg5
+	syscall
+	
+	li $v0, 1
+	add $a0, $t2, 0
+	syscall
+
+	
+	
+	
+	
+	
