@@ -21,6 +21,8 @@ ler:
    
    li $v0, 5 
    syscall
+
+   bgt $v0, 100, ler
    blt $v0, $zero, fim
    blt $v0, 26, primeiro
    blt $v0, 51, segundo 
