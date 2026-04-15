@@ -39,7 +39,7 @@ smaior:
    beq $t1, $zero, entrada1
    div $t2, $v0, $t1
    mul $t2, $t2, $t1 
-   sub $t1, $t1, $t2  
+   sub $t1, $v0, $t2  
 
 fim:
    li $v0, 4
