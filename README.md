@@ -1,3 +1,6 @@
+**EXERCICIOS DE LÓGICA DE PROGRAMAÇÃO EM ASSEMBLY MIPS**
+**MATERIA: Arquitetura e Organização De Computadores**
+ 
  1 - A imobiliária Imóbils vende apenas terrenos
  retangulares. Faça um algoritmo para ler as
  dimensões de um terreno e depois exibir
